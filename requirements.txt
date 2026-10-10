@@ -1,0 +1,5 @@
+python-telegram-bot>=21.6
+openai>=1.40
+python-dotenv>=1.0
+cryptography>=42.0
+Pillow>=10.0

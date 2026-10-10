@@ -1,0 +1,16 @@
+[Unit]
+Description=LeChonk Telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# %h = the user's home directory (systemd user-unit specifier)
+WorkingDirectory=%h/lechonk-bot
+ExecStart=%h/lechonk-bot/.venv/bin/python %h/lechonk-bot/bot.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
