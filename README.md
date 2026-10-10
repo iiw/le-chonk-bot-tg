@@ -25,7 +25,8 @@ Le Chonk is a chat assistant bot for Telegram built on an OpenAI-compatible LLM 
 - ⭐ **Telegram Stars packs** — 20/50/100 prepaid requests (configurable), with balances, billing and refunds.
 - 🤝 **Chat sponsorship** — one member can cover replies for everyone else in a group.
 - 👑 **Owner toolkit** — per-chat prompts, context size, model overrides, access management, status.
-- 🔒 **Private by design** — message texts never touch the disk; keys live in a `chmod 600` file, encrypted at rest (AES-256-GCM), and never appear in logs.
+- 🔒 **Private by design** — message texts never touch the disk; keys live in a `chmod 600` file and never appear in logs.
+- 🔐 **Encryption at rest** — personal API keys are stored AES-256-GCM encrypted (`ENCRYPTION_KEY` in `.env`); the on-disk file holds ciphertext only.
 - 📊 **Cache analytics** — `data/usage.log` records prompt / cached / completion token counters for every call.
 
 ## 💬 How conversations work
